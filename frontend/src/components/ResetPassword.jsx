@@ -17,11 +17,11 @@ const ResetPassword = () => {
       setError('Please provide a new security key');
       return;
     }
-    
+
     setIsSubmitting(true);
     const msg = await resetPassword(token, password);
     setIsSubmitting(false);
-    
+
     if (msg) {
       setSuccessMsg(msg);
       setTimeout(() => navigate('/login'), 2500);

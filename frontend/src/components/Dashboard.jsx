@@ -58,7 +58,7 @@ const Dashboard = () => {
             {user.id}
           </div>
         </div>
-        
+
         <div className="card glass-panel" style={{ gridColumn: '1 / -1' }}>
           <div className="card-title">
             <Shield size={24} color="var(--success-color)" />

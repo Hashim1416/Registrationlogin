@@ -17,11 +17,11 @@ const Register = () => {
       setError('Please fill in all fields');
       return;
     }
-    
+
     setIsSubmitting(true);
     const success = await register(name, email, password);
     setIsSubmitting(false);
-    
+
     if (success) {
       navigate('/dashboard');
     }

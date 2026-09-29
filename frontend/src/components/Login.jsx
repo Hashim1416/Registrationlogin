@@ -16,11 +16,11 @@ const Login = () => {
       setError('Please fill in all fields');
       return;
     }
-    
+
     setIsSubmitting(true);
     const success = await login(email, password);
     setIsSubmitting(false);
-    
+
     if (success) {
       navigate('/dashboard');
     }

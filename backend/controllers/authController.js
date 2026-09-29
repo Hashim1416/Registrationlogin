@@ -52,7 +52,7 @@ const loginUser = (req, res) => {
 
   db.get(`SELECT * FROM users WHERE email = ?`, [email], async (err, user) => {
     if (err) return res.status(500).json({ message: 'Server error' });
-    
+
     if (user && (await bcrypt.compare(password, user.password))) {
       res.json({
         _id: user.id,
@@ -87,7 +87,7 @@ const forgotPassword = (req, res) => {
       // SIMULATING EMAIL SEND
       const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
       console.log(`\n================================\nRESET LINK FOR ${email}:\n${resetLink}\n================================\n`);
-      
+
       res.status(200).json({ message: 'Password reset link sent (check server console)', resetToken });
     });
   });

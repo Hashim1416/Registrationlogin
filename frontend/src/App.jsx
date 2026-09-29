@@ -20,7 +20,7 @@ function App() {
             <a href="#" className="nav-link">Documentation</a>
           </div>
         </nav>
-        
+
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />

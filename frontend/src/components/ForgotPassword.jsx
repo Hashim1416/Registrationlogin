@@ -15,12 +15,12 @@ const ForgotPassword = () => {
       setError('Please provide your email');
       return;
     }
-    
+
     setIsSubmitting(true);
     setSuccessMsg(null);
     const msg = await forgotPassword(email);
     setIsSubmitting(false);
-    
+
     if (msg) {
       setSuccessMsg(msg);
     }
