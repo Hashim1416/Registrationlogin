@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dist-ssr/
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/
